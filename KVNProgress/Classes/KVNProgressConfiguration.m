@@ -17,6 +17,8 @@
 	if (self = [super init]) {
 		_backgroundFillColor = [UIColor colorWithWhite:1.0f alpha:0.85f];
 		_backgroundTintColor = [[UIColor whiteColor] colorWithAlphaComponent:0.6f];
+        _backgroundWindowColor = [UIColor colorWithWhite:0.0f
+                                                   alpha:0.35f];
 		_backgroundType = KVNProgressBackgroundTypeBlurred;
 		_fullScreen = NO;
 		_showStop = NO;
@@ -54,6 +56,7 @@
 	
 	copy.backgroundFillColor = [self.backgroundFillColor copy];
 	copy.backgroundTintColor = [self.backgroundTintColor copy];
+    copy.backgroundWindowColor = [self.backgroundWindowColor copy];
 	copy.backgroundType = self.backgroundType;
 	copy.fullScreen = [self isFullScreen];
 	copy.showStop = [self doesShowStop];

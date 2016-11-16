@@ -24,7 +24,8 @@ typedef NS_ENUM(NSUInteger, KVNProgressBackgroundType) {
 @interface KVNProgressConfiguration : NSObject <NSCopying>
 
 #pragma mark - Background
-
+/** Color of the background window. Is not used when backgroundType is KVNProgressBackgroundTypeBlurred. */
+@property (nonatomic, strong) UIColor *backgroundWindowColor;
 /** Color of the background view. Is not used when backgroundType is KVNProgressBackgroundTypeBlurred. */
 @property (nonatomic, strong) UIColor *backgroundFillColor;
 /** Tint color of the background view. Used to tint blurred background only when backgroundType is KVNProgressBackgroundTypeBlurred. */
